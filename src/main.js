@@ -25,8 +25,12 @@ app.get('/', function (req, res) {
     res.render('home');
 });
 
-app.get('/:news', function (req, res) {
-    res.render('news');
+app.get('/:news', function (request, response) {
+    response.render('news');
+});
+
+app.get('/:flutter', function (req, res) {
+    res.render('home');
 });
 
 app.listen(port, () => { console.log(`Example app listening on port localhost:${port}`)})
